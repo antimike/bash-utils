@@ -83,9 +83,11 @@ parse_options() {
 }
 
 main() {
+
 	# Main program logic and control flow
 	:
 }
 
 trap clean_up SIGHUP SIGINT SIGTERM
+parse_options "$@"
 main "$@"
