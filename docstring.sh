@@ -1,6 +1,7 @@
 #!/bin/bash
 
-. $(dirname "$0")/parse_options.sh
+source_dir="$(dirname ${BASH_SOURCE[0]})"
+source "${source_dir}/parse_optsions_v2"
 
 set_docstring() {
 

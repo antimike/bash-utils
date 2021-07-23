@@ -1,3 +1,8 @@
+source_dir="$(dirname ${BASH_SOURCE[0]})"
+source "${source_dir}/array_utils.sh"
+source "${source_dir}/string_utils.sh"
+source "${source_dir}/errors.sh"
+
 declare -a parse_order=() # To maintain the parse order
 declare -A parsed=()      # Parsed (key, value) pairs (unordered)
 
@@ -49,7 +54,7 @@ done
 
 # parse_options
 # =============
-#
+
 # Implementation of a simple options parser.
 #
 # params (to appear after --):
@@ -104,3 +109,5 @@ _parse_options_internal() {
     shift
   done
 }
+
+#################################################################################
